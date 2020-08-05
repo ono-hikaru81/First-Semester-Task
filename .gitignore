@@ -20,3 +20,6 @@ GameProgramming/倉庫番/倉庫番/Project/data/
 GameProgramming/倉庫番/倉庫番/Project/dxlib/
 *.filters
 *.user
+*.db-shm
+*.db-wal
+*.opendb

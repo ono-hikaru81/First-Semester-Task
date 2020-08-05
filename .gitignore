@@ -23,3 +23,5 @@ GameProgramming/倉庫番/倉庫番/Project/dxlib/
 *.db-shm
 *.db-wal
 *.opendb
+*.json
+*.sqlite

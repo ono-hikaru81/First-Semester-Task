@@ -23,7 +23,18 @@ const int STAGE_HEIGHT = 13;
 //		4	未配置のクレート
 //		7	配置済みのクレート
 //			(配置場所'3'+未配置クレート'4' = 7）
-※※ 定義を作る
+// 定義を作る
+#define GROUND         0
+#define WALL           1
+#define NEW_PLAYER_POS 2
+#define PLACED_POS     3
+#define UNPLACED_CRATE 4
+const enum Crate
+{
+	Crate01,
+	Crate02,
+	Crate03
+};
 
 // プレイヤーの向き
 #define DIR_UP		0

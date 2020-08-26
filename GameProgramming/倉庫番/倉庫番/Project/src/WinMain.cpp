@@ -70,6 +70,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// ローカル変数宣言
 	// ----------------------------------------------------
 
+
 	// 各種初期化処理
 	// ----------------------------------------------------
 	InputInit();			// 入力処理初期化関数の呼び出し

@@ -4,8 +4,6 @@
 // 制作課題 その１
 // ==============================
 
-// 2020/08/05 Git ブランチ練習用のコメント
-
 /**
 ■説明
 	以下のプログラムは [ Hit And Blow ] というゲームをコーディングし、
@@ -95,7 +93,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// ----------------------------------------------------
 	InputInit();			// 入力処理初期化関数の呼び出し
 	DrawInit();				// 描画処理初期化関数の呼び出し
-	int CreateTargetNumber(DIGITS); // 問題となる数字の作成
+	CreateTargetNumber();   // 問題となる数字の作成
 
 	count = 0; // countを０で初期化
 	cursor = 0; // cursorを０で初期化
@@ -154,13 +152,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			else if(IsPushKey(MY_INPUT_ENTER))
 			{
 				// 入力した数字が有効か if文 でチェックする
-				if (IsValidNumber)
+				if (IsValidNumber() == true)
 				{
 						if (true)	// チェックした結果が true の時、以下の処理を行う         
 						{
-							bool IsMatch(int* numHit, int* numBlow);       // hit, blowの数をチェックし、その返り値を gameClear に代入
+							gameClear = IsMatch(& hit, & blow );       // hit, blowの数をチェックし、その返り値を gameClear に代入
 						}
-
 						count++;	// 入力回数 count を 1増やす
 				}
 			}
@@ -213,7 +210,11 @@ void CreateTargetNumber()
 			target[i] = rand() % 10;
 			isValid = true;
 			for (int j = 0; j <= (i - 1); j++)
-			{              
+			{
+				if (i == j)
+				{
+					continue;
+				}
 				if (target[i] == target[j])
 				{
 					isValid == false;
@@ -227,6 +228,10 @@ void CreateTargetNumber()
      // 同じ数字がないかをチェック
      // 今回の数字が無効な値だったら isValid を false に
      // 有効な値だったら isValid を true にする
+//	if ()
+//	{
+//
+//	}
 }
 
 // ==============================
@@ -240,7 +245,7 @@ bool IsValidNumber()
 	for (int i = 0; i < DIGITS; i++)
 	{
 		// i 番目の桁が無効だったら false を返す
-		if (0 > DIGITS > 9)
+		if (IsValidDigit(i) == false)
 		{
 			return false;
 		}
@@ -289,10 +294,10 @@ bool IsMatch(int* numHit, int* numBlow)
 
 	for(int i = 0; i < DIGITS; i++)
 	{
-		for(int j = 0; j <= DIGITS; j++)
+		for(int j = 0; j < DIGITS; j++)
 		{
-			target[i];
-			num[j];
+//			target[i];
+//			num[j];
 			// target の i 番目、 num の j 番目が同じか調べる
 			if (target[i] == num[j])
 			{

@@ -1,6 +1,0 @@
-﻿  DrawManager.cpp
-  InputManager.cpp
-  WinMain.cpp
-C:\Users\Onohi\Documents\HA-プログラミング\提出課題\Hit_And_Blow\Hit_And_Blow\Project\src\WinMain.cpp(220,14): warning C4553: '==': 式の結果が使用されていません。'=' を意図していますか?
-  コードを生成中...
-  BaseProject.vcxproj -> C:\Users\Onohi\Documents\HA-プログラミング\提出課題\Hit_And_Blow\Hit_And_Blow\Project\x64\Debug\BaseProject.exe

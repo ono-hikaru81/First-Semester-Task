@@ -46,6 +46,8 @@
 #include "GameDefinition.h"
 #include <stdio.h>
 
+/*
+
 // ==============================
 // 関数プロトタイプ宣言
 // ==============================
@@ -132,4 +134,5 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	return 0;
 }
+*/
 
